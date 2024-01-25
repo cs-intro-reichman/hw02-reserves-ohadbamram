@@ -5,7 +5,9 @@
 public class Reverse {
 	public static void main (String[] args){
 		String original = args[0]; //gets string from user
-		char middleChar = original.charAt(original.length() / 2); //saves the middle char
+		char middleChar = 'a';
+		if(original.length() % 2 == 0) middleChar = original.charAt(original.length() / 2 - 1); //saves the middle char
+		else middleChar = original.charAt(original.length() / 2);
 		String reverse = ""; //defines the string that will become the reverse
 		while (original.length()>0){ //creates a loop that runs as long as the original string has chars
 			reverse = reverse + original.charAt(original.length() - 1); //adds the last char of the original string to the reverse string
