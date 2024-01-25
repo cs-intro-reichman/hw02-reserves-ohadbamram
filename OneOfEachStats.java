@@ -10,20 +10,45 @@ import java.util.Random;
 public class OneOfEachStats {
 	public static void main (String[] args) {
 		// Gets the two command-line arguments
-		int T = Integer.parseInt(args[0]);
+		int t = Integer.parseInt(args[0]);
 		int seed = Integer.parseInt(args[1]);
 		// Initailizes a random numbers generator with the given seed value
         Random generator = new Random(seed);  
-		
-		//// In the previous version of this program, you used a statement like:
-		//// double rnd = Math.random();
-		//// Where "rnd" is the variable that stores the generated random value.
-		//// In this version of the program, replace this statement with:
-		//// double rnd = generator.nextDouble();
-		//// This statement will generate a random value in the range [0,1),
-		//// just like you had in the previous version, except that the 
-		//// randomization will be based on the given seed.
-		//// This is the only change that you have to do in the program.
-		    
+		double r1 = 0; 
+		double avg = 0;
+		int fam2 = 0;
+		int fam3 = 0;
+		int fam4 = 0;
+		String msg = "The most common number of children is ";
+		for(int i = 0; i < t; i++){
+			int boys = 0;
+		    int girls = 0;
+			int sum = 0;
+			while(boys < 1 || girls < 1){ //
+				r1 = generator.nextDouble();
+				if(r1 <= 0.4){
+					boys += 1;
+				}else{
+					girls += 1;
+				}			
+			}
+			sum = boys + girls;
+			avg += (double) sum;
+			if(sum == 2) fam2++;
+			else if(sum == 3) fam3++;
+			else fam4++;
+		}
+		avg = avg / t;
+		System.out.println("Average: " + avg + " children to get at least one of each gender.");
+		System.out.println("Number of families with 2 children: " + fam2);
+		System.out.println("Number of families with 3 children: " + fam3);
+		System.out.println("Number of families with 4 or more children: " + fam4);
+		if(fam2 >= fam3){
+			if(fam2 >= fam4) msg += "2";
+			else msg += "4 or more";
+		}else if(fam3 >= fam4){
+			msg += "3";
+		}else msg += "4 or more";
+		System.out.println(msg + ".");
 	}
 }
