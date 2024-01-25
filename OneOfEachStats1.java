@@ -28,21 +28,28 @@ public class OneOfEachStats1 {
 			}
 			
 			avg += sum; //adds each sum to a total of kids in all trials
-			if(sum == 2) fam2++; //adds to number of families with 2 kids
-			else if(sum == 3) fam3++; //adds to number of families with 3 kids
-			else fam4++; //adds to number of families with 4 or more kids
+			if (sum == 2) {
+				fam2++;
+			} else {
+			    if (sum == 3) {
+			    	fam3++;
+			    } else {
+			        fam4++;
+			    }
+			}
 		}
 		avg = avg / t; //gets an average amount of kids from the total amount of trials
-		System.out.println("Average: " + avg + " children to get at least one of each gender."); //prints the info
-		System.out.println("Number of families with 2 children: " + fam2);
-		System.out.println("Number of families with 3 children: " + fam3);
-		System.out.println("Number of families with 4 or more children: " + fam4);
 		if(fam2 >= fam3){ //calculates the last message based on how many families had how many kids
 			if(fam2 >= fam4) msg += "2";
 			else msg += "4 or more";
 		}else if(fam3 >= fam4){
 			msg += "3";
-		}else msg += "4 or more";
+			}else msg += "4 or more";
 		System.out.println(msg + ".");
+		System.out.println("Average: " + avg + " children to get at least one of each gender."); //prints the info
+		System.out.println("Number of families with 2 children: " + fam2);
+		System.out.println("Number of families with 3 children: " + fam3);
+		System.out.println("Number of families with 4 or more children: " + fam4);
+
 	}
 }
