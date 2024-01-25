@@ -14,15 +14,15 @@ public class OneOfEachStats1 {
 		int fam4 = 0; //establishes a variable for amount of families that had 4 kids
 		String msg = "The most common number of children is "; //establishes a variable for the last message
 		for(int i = 0; i < t; i++){ //runs the OneOfEach program for each number of trials
-			int boys = 0;
-		    int girls = 0;
+			boolean boys = false;
+		    boolean girls = false;
 			int sum = 0;
-			while(boys < 1 || girls < 1){ //runs the OneOfEach program
+			while(!(boys && girls)){ //runs the OneOfEach program
 				r1 = Math.random();
 				if(r1 <= 0.4){
-					boys += 1;
+					boys = true;
 				}else{
-					girls += 1;
+					girls = true;
 				}
 				sum++; //sums amount of kids in each trial					
 			}

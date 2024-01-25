@@ -21,15 +21,15 @@ public class OneOfEachStats {
 		int fam4 = 0;
 		String msg = "The most common number of children is ";
 		for(int i = 0; i < t; i++){
-			int boys = 0;
-		    int girls = 0;
+			boolean boys = false;
+		    boolean girls = false;
 			int sum = 0;
-			while(boys < 1 || girls < 1){ //
+			while(!(boys && girls)){ //
 				r1 = generator.nextDouble();
 				if(r1 <= 0.4){
-					boys += 1;
+					boys = true;
 				}else{
-					girls += 1;
+					girls = true;
 				}	
 				sum++;				
 			}
