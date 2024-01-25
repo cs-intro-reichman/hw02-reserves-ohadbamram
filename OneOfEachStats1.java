@@ -23,9 +23,10 @@ public class OneOfEachStats1 {
 					boys += 1;
 				}else{
 					girls += 1;
-				}			
+				}
+				sum++; //sums amount of kids in each trial					
 			}
-			sum = boys + girls; //sums amount of kids in each trial
+			
 			avg += (double) sum; //adds each sum to a total of kids in all trials
 			if(sum == 2) fam2++; //adds to number of families with 2 kids
 			else if(sum == 3) fam3++; //adds to number of families with 3 kids

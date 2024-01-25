@@ -30,9 +30,10 @@ public class OneOfEachStats {
 					boys += 1;
 				}else{
 					girls += 1;
-				}			
+				}	
+				sum++;				
 			}
-			sum = boys + girls;
+			
 			avg += (double) sum;
 			if(sum == 2) fam2++;
 			else if(sum == 3) fam3++;
