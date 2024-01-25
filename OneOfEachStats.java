@@ -13,8 +13,7 @@ public class OneOfEachStats {
 		int t = Integer.parseInt(args[0]);
 		int seed = Integer.parseInt(args[1]);
 		// Initailizes a random numbers generator with the given seed value
-        Random generator = new Random(seed);  
-		double r1 = 0; 
+        Random generator = new Random(seed);   
 		double avg = 0;
 		int fam2 = 0;
 		int fam3 = 0;
@@ -25,7 +24,7 @@ public class OneOfEachStats {
 		    boolean girls = false;
 			int sum = 0;
 			while(!(boys && girls)){ //
-				r1 = generator.nextDouble();
+				double r1 = generator.nextDouble();
 				if(r1 <= 0.4){
 					boys = true;
 				}else{
@@ -34,7 +33,7 @@ public class OneOfEachStats {
 				sum++;				
 			}
 			
-			avg += (double) sum;
+			avg += sum;
 			if(sum == 2) fam2++;
 			else if(sum == 3) fam3++;
 			else fam4++;
