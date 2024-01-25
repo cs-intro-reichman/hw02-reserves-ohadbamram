@@ -5,13 +5,12 @@
  */
 public class OneOfEach {
 	public static void main (String[] args) {
-		double r1 = 0; 
 		boolean boys = false;
 		boolean girls = false;
 		int sum = 0;
 		String msg1 = ""; //makes 4 variables, one for the random generator, one for each gender, one to count, and one for the message
 		while(!(boys && girls)){ //a loop that runs until both boys and girls are true
-			r1 = Math.random(); //generates a random number from 0.0 to 0.9
+			double r1 = Math.random(); //generates a random number from 0.0 to 0.9
 			if(r1 <= 0.4){ //if the number is 0.4 or less, adds 1 boy to the count and to the message
 				boys = true;
 				msg1 += "b ";
