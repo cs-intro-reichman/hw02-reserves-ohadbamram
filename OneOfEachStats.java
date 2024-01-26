@@ -51,10 +51,9 @@ public class OneOfEachStats {
 		int max = Math.max(Math.max(fam2, fam3), fam4);
 		if (max == fam2) {
 			common += "2.";
-		} 
-		if (max == fam3) {
+		}else  if (max == fam3) {
 			common+= "3.";
-		} else {
+		} else{
 		    common+= "4 or more.";
 		}
 		
