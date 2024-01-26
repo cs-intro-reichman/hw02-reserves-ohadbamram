@@ -29,13 +29,11 @@ public class OneOfEachStats1 {
 		bigSum += sum; //adds each sum to a total of kids in all trials
 		if (sum == 2) {
 			fam2++;
-		} else {
-		    if (sum == 3) {
+		} else if (sum == 3) {
 		    	fam3++;
 				} else {
 					fam4++;
 				}
-			}
 		}
 		double avg = bigSum / t; //gets an average amount of kids from the total amount of trials
 		System.out.println("Average: " + avg + " children to get at least one of each gender."); //prints the info

@@ -35,8 +35,7 @@ public class OneOfEachStats {
 		bigSum += sum; //adds each sum to a total of kids in all trials
 		if (sum == 2) {
 			fam2++;
-		} 
-		if (sum == 3) {
+		}else if (sum == 3) {
 		   	fam3++;
 		} else {
 					fam4++;
