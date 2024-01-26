@@ -24,7 +24,7 @@ public class OneOfEachStats {
 			int sum = 0;
 			while(!(boys && girls)){ //runs the OneOfEach program
 				double r1 = generator.nextDouble();
-				if(r1 <= 0.4){
+				if(r1 <= 0.5){
 					boys = true;
 				}else{
 					girls = true;
