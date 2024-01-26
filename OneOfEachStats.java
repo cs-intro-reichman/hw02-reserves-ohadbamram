@@ -35,13 +35,13 @@ public class OneOfEachStats {
 		bigSum += sum; //adds each sum to a total of kids in all trials
 		if (sum == 2) {
 			fam2++;
+		} 
+		if (sum == 3) {
+		   	fam3++;
 		} else {
-		    if (sum == 3) {
-		    	fam3++;
-				} else {
 					fam4++;
 				}
-			}
+			
 		}
 		double avg = bigSum / t; //gets an average amount of kids from the total amount of trials
 		System.out.println("Average: " + avg + " children to get at least one of each gender."); //prints the info
@@ -52,13 +52,13 @@ public class OneOfEachStats {
 		int max = Math.max(Math.max(fam2, fam3), fam4);
 		if (max == fam2) {
 			common += "2.";
+		} 
+		if (max == fam3) {
+			common+= "3.";
 		} else {
-			if (max == fam3) {
-				common+= "3.";
-			} else {
-			    common+= "4 or more.";
-			}
+		    common+= "4 or more.";
 		}
+		
 		System.out.println(common);
 	}
 }
