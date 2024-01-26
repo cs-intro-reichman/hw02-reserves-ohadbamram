@@ -18,7 +18,7 @@ public class OneOfEachStats1 {
 			int sum = 0;
 			while(!(boys && girls)){ //runs the OneOfEach program
 				double r1 = Math.random();
-				if(r1 <= 0.5){
+				if(r1 < 0.5){
 					boys = true;
 				}else{
 					girls = true;
